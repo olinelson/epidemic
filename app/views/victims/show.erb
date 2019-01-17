@@ -1,0 +1,6 @@
+<h2> RIP : <%= @victim.name %></h2>
+
+<p>Age: <%= @victim.age %></p>
+<p>Flu Nickname: <%= @victim.flu.nickname %></p>
+
+<%= button_to "delete", @victim, method: 'delete' %>

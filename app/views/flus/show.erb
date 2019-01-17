@@ -1,0 +1,13 @@
+<h2> Flu info: </h2>
+
+<p>Nickname: <%=@flu.nickname %></p>
+<p>Strain: <%=@flu.strain %></p>
+<p>Fatal?: <%=@flu.fatal ? "True" : "False" %></p>
+
+<h3>Victim list: </h3>
+<ul>
+    <% @victims.each do |v| %>
+        <li><%=link_to v.name, v %></li>
+    <% end %>
+</ul>
+<p>Victim count: <%= @victims.length %></p>

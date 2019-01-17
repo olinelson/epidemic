@@ -1,0 +1,11 @@
+<h1> Create another victim </h1>
+
+<%= form_for @victim do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <%= f.label :flu %>
+    <%= f.collection_select :flu_id, @flus, :id, :nickname %>    
+    <%= f.submit %>
+<% end %>
